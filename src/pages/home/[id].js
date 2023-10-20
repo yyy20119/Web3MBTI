@@ -27,10 +27,6 @@ function ChianPage({ id }) {
     if (chain != undefined && chain.id != chainId) {
       setChainId(chain.id)
     }
-
-    if (isConnected && (chainId in networkMapping)) {
-      router.push(`/home/${chainId}`)
-    }
   },
     [account, chain]
   )
