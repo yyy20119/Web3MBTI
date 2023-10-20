@@ -18,13 +18,13 @@ function ChianPage({ id }) {
   const account = useAccount()
   const { chain } = useNetwork()
   const [isConnected, setIsConnected] = useState(false)
-  const [chainId, setChainId] = useState()
+  const [chainId, setChainId] = useState(id)
   const router = useRouter();
 
 
   useEffect(() => {
     setIsConnected(account.isConnected)
-    if (chain != undefined) {
+    if (chain != undefined && chain.id != chainId) {
       setChainId(chain.id)
     }
 
