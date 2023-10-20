@@ -15,7 +15,7 @@
     "axios": "^1.2.2",
     "ethers": "^5.7.2",
     "framer-motion": "^10.16.4",
-    "next": "^13.1.2",
+    "next": "^13.5.3",
     "nextjs-progressbar": "^0.0.16",
     "notistack": "^2.0.8",
     "react": "^18.2.0",
