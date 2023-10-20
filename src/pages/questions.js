@@ -38,7 +38,7 @@ function QuestionsPage() {
 
   return (
     <div id="mainContainer">
-      <h1 class="text-2xl font-semibold text-indigo-600">Web3MBTI</h1>
+      <h1 className="text-2xl font-semibold text-indigo-600">Web3MBTI</h1>
       <div>
         {questions.map((question, index) => (
           <div key={index}>

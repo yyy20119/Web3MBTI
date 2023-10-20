@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { useAccount } from 'wagmi'
 import { useNetwork } from 'wagmi'
@@ -35,7 +36,7 @@ function ChianPage({ id }) {
   )
 
 
-  const { data, isFetching, isRefetching, isSuccess } = useContractRead({
+  const { data, isFetching, isSuccess } = useContractRead({
     address: networkMapping[id]['contractAddress'],
     abi: abi,
     functionName: 'getMBTIResult',
@@ -82,6 +83,10 @@ export async function getServerSideProps(context) {
     }
   }
 }
+
+ChianPage.propTypes = {
+  id: PropTypes.any,
+};
 
 
 export default ChianPage;

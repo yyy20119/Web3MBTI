@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useEffect } from "react";
 import {
   usePrepareContractWrite,
@@ -158,5 +159,18 @@ const WriteButton = ({ onClick, children, abi, functionName, value, userAnswers,
     </>
   );
 };
+
+WriteButton.propTypes = {
+  onClick: PropTypes.func,
+  children: PropTypes.any,
+  abi: PropTypes.any.isRequired,
+  functionName: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  args: PropTypes.array.isRequired,
+  userAnswers: PropTypes.array.isRequired,
+  chainId: PropTypes.any.isRequired,
+  disabled: PropTypes.bool.isRequired
+};
+
 
 export default WriteButton;
